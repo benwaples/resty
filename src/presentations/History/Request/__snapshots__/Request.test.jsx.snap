@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Old request component should render an old request 1`] = `
+<DocumentFragment>
+  <li
+    class="Request"
+  >
+    <p>
+      GET
+    </p>
+    <p>
+      google.com
+    </p>
+  </li>
+</DocumentFragment>
+`;
