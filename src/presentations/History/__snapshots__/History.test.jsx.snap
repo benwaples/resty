@@ -8,30 +8,42 @@ exports[`Old request component should render an old request 1`] = `
     <li
       class="Request"
     >
-      <p>
+      <p
+        class="method"
+      >
         GET
       </p>
-      <p>
+      <p
+        class="url"
+      >
         google.com
       </p>
     </li>
     <li
       class="Request"
     >
-      <p>
+      <p
+        class="method"
+      >
         GET
       </p>
-      <p>
+      <p
+        class="url"
+      >
         yahoo.com
       </p>
     </li>
     <li
       class="Request"
     >
-      <p>
+      <p
+        class="method"
+      >
         GET
       </p>
-      <p>
+      <p
+        class="url"
+      >
         wiseguy.com
       </p>
     </li>
