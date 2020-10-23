@@ -20,8 +20,8 @@ export default class Resty extends Component {
     event.preventDefault();
     // eslint-disable-next-line max-len
     
-    const json = await fetchUrl(this.state.url, this.state.method);
-    const response = await json.json();
+    const data = await fetchUrl(this.state.url, this.state.method);
+    const response = await data.json();
     
     this.setState(state => ({
       response,

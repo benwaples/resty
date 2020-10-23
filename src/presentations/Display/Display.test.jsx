@@ -1,6 +1,5 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
-// import { json } from './testJson';
 import Display from './Display';
 
 describe('Display components', () => {
