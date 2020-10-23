@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Display.css';
-import renderjson from 'renderjson';
-import HtmlToReactParser from 'html-to-react';
+import ReactJson from 'react-json-view';
 
 function Display({ response }) {
   // eslint-disable-next-line max-len
@@ -10,7 +9,10 @@ function Display({ response }) {
   // const html = renderjson;
   return (
     <div>
-      {`${display}`}
+      <ReactJson 
+        src={response} 
+        displayDataTypes={false} 
+        displayObjectSize={false} />
     </div>
   );
 }

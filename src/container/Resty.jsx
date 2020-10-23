@@ -15,34 +15,34 @@ export default class Resty extends Component {
 
   handleSubmit = async(event) => {
     event.preventDefault();
-  
-    const json = await fetchUrl(this.state.url, this.state.method);
-    const response = await json.json();
     // eslint-disable-next-line max-len
     if(this.state.history.includes({ url: this.state.url, method: this.state.method })) {
-      this.setState({ response, url: '' });
-    } else {
-      this.setState(state => ({
-        response,
-        history: [
-          ...state.history,
-          { url: state.url, method: state.method }
-        ],
-        url: '',
-      }));
+      alert('already searched for');
+      return this.setState({ response, url: '' });
     }
-  }
-
-  handleClick = async(url, method) => {
-    console.log('it fires');
-    const json = await fetchUrl(url, method);
+    const json = await fetchUrl(this.state.url, this.state.method);
     const response = await json.json();
-    console.log(json);
+    
     this.setState(state => ({
       response,
       history: [
         ...state.history,
-        { url, method }
+        { url: state.url, method: state.method }
+      ],
+      url: '',
+    }));
+    
+  }
+
+  handleClick = async(url, method) => {
+    const json = await fetchUrl(url, method);
+    const response = await json.json();
+
+    this.setState(state => ({
+      response,
+      history: [
+        ...state.history,
+        { url: state.url, method: state.method }
       ],
       url: '',
     }));
