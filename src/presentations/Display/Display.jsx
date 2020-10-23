@@ -4,15 +4,13 @@ import styles from './Display.css';
 import ReactJson from 'react-json-view';
 
 function Display({ response }) {
-  // eslint-disable-next-line max-len
-  const display = (Object.keys(response).length) ? JSON.stringify(response) : 'display json response';
-  // const html = renderjson;
   return (
-    <div>
+    <div id={styles.Display}>
       <ReactJson 
         src={response} 
         displayDataTypes={false} 
-        displayObjectSize={false} />
+        displayObjectSize={false}
+        theme={'brewer'} />
     </div>
   );
 }

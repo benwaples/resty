@@ -1,5 +1,7 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Controls.css';
 
 function Controls({
   url,
@@ -9,24 +11,28 @@ function Controls({
   onSubmit
 }) {
   return (
-    <div>
+    <div id={styles.Controls}>
       <form onSubmit={onSubmit}>
-        <label htmlFor="url">URL</label>
-        <input 
-          type="text"
-          name="url"
-          value={url}
-          onChange={onChange}
-        />
-        <label htmlFor="method" >HTTP Request Method</label>
-        <select name="method" onChange={onChange} value={method}>
-          <option value="GET">GET</option>
-          <option value="POST">POST</option>
-          <option value="PUT">PUT</option>
-          <option value="PATCH">PATCH</option>
-          <option value="DELETE">DELETE</option>
-        </select>
+        <label htmlFor="url">URL
+          <input 
+            type="text"
+            name="url"
+            value={url}
+            onChange={onChange}
+          />
+        </label>
+        <label htmlFor="method" >HTTP Request Method
+          <select name="method" onChange={onChange} value={method}>
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+        </label>
+        <p>JSON data</p>
         <textarea name="body" onChange={onChange} value={body}></textarea>
+        <button onClick={onSubmit}>Submit</button>
       </form>
     </div>
   );

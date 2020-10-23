@@ -1,0 +1,20 @@
+.Request {
+  display: inline;
+  .method {
+    background-color: #52A0A3;
+    color: hsl(142, 100%, 98%);
+    width: fit-content;
+    padding: 5px;
+    margin: 0;
+    display: inline;
+    border-radius: 5px 0 0 5px;
+  }
+  .url {
+    background-color: #000F08;
+    color: #F4FFF8;
+    padding: 5px;
+    margin: 0;
+    display: inline;
+    
+  }
+}

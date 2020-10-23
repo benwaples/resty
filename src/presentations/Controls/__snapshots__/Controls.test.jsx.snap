@@ -2,55 +2,65 @@
 
 exports[`Controls component should render controls 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    id="Controls"
+  >
     <form>
       <label
         for="url"
       >
         URL
+        <input
+          name="url"
+          type="text"
+          value="blank"
+        />
       </label>
-      <input
-        name="url"
-        type="text"
-        value="blank"
-      />
       <label
         for="method"
       >
         HTTP Request Method
+        <select
+          name="method"
+        >
+          <option
+            value="GET"
+          >
+            GET
+          </option>
+          <option
+            value="POST"
+          >
+            POST
+          </option>
+          <option
+            value="PUT"
+          >
+            PUT
+          </option>
+          <option
+            value="PATCH"
+          >
+            PATCH
+          </option>
+          <option
+            value="DELETE"
+          >
+            DELETE
+          </option>
+        </select>
       </label>
-      <select
-        name="method"
+      <p>
+        JSON data
+      </p>
+      <textarea
+        name="body"
       >
-        <option
-          value="GET"
-        >
-          GET
-        </option>
-        <option
-          value="POST"
-        >
-          POST
-        </option>
-        <option
-          value="PUT"
-        >
-          PUT
-        </option>
-        <option
-          value="PATCH"
-        >
-          PATCH
-        </option>
-        <option
-          value="DELETE"
-        >
-          DELETE
-        </option>
-      </select>
-      <textarea>
         blank
       </textarea>
+      <button>
+        Submit
+      </button>
     </form>
   </div>
 </DocumentFragment>

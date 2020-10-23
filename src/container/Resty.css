@@ -1,0 +1,13 @@
+#Resty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  #containHistoryAndControls {
+    align-self: start;
+    position: sticky;
+  top: 50px;
+  }
+
+}

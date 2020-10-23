@@ -5,8 +5,8 @@ import styles from './Request.css';
 function Request({ method, url, onClick }) {
   return (
     <li onClick={() => onClick(url, method)}className={styles.Request}>
-      <p>{method}</p>
-      <p>{url}</p>
+      <p className={styles.method}>{method}</p>
+      <p className={styles.url}>{url}</p>
     </li>
   );
 }

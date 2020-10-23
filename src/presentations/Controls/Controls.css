@@ -1,0 +1,26 @@
+#Controls {
+  position: sticky;
+  top: 50px;
+  box-sizing: border-box;
+  background-color: #8BAAAD ;
+  form {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+
+    label {
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      border: 1px solid black;
+      padding: 8px;
+      border-radius: 8px;
+    }
+  }
+  
+}

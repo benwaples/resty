@@ -3,6 +3,9 @@ import Controls from '../presentations/Controls/Controls';
 import Display from '../presentations/Display/Display';
 import History from '../presentations/History/History';
 import { fetchUrl } from '../services/fetch-url';
+import cleanHistory from '../services/cleanHistory';
+import styles from './Resty.css';
+import Header from '../components/Header';
 
 export default class Resty extends Component {
   state = {
@@ -28,6 +31,9 @@ export default class Resty extends Component {
       ],
       url: '',
     }));
+
+    this.setState({ history: cleanHistory(this.state.history) });
+
     
   }
 
@@ -53,20 +59,27 @@ export default class Resty extends Component {
     } = this.state;
       
     return (
-      <div>
-        <Controls 
-          url={url}
-          method={method}
-          body={body}
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
-        <Display 
-          response={response}/>
-        <History 
-          history={history}
-          onClick={this.handleClick}/>
-      </div>
+      <>
+        <Header />
+        <div id={styles.Resty}>
+          <div id={styles.containHistoryAndControls}>
+            <Controls 
+              url={url}
+              method={method}
+              body={body}
+              onChange={this.handleChange}
+              onSubmit={this.handleSubmit}
+            />
+            <History 
+              history={history}
+              onClick={this.handleClick}
+            />
+          </div>
+          <Display 
+            response={response}
+          />
+        </div>
+      </>
     );
   }
 }

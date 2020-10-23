@@ -1,0 +1,12 @@
+#Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  background-color: #1C3738;
+  color: #F4FFF8;
+  
+}
