@@ -6,11 +6,11 @@ import HtmlToReactParser from 'html-to-react';
 
 function Display({ response }) {
   // eslint-disable-next-line max-len
-  const display = (Object.keys(response).length) ? response : 'display json response';
-  // const html = renderjson(response);
+  const display = (Object.keys(response).length) ? JSON.stringify(response) : 'display json response';
+  // const html = renderjson;
   return (
     <div>
-      {`${JSON.stringify(display)}`}
+      {`${display}`}
     </div>
   );
 }

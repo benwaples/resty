@@ -9,6 +9,7 @@ describe('Old request component', () => {
     const { asFragment } = render(<Request 
       method="GET"
       url="google.com" 
+      onClick={() => {}}
     />);
 
     expect(asFragment()).toMatchSnapshot();

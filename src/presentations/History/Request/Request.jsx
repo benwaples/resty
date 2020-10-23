@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Request.css';
 
-function Request({ method, url }) {
+function Request({ method, url, onClick }) {
   return (
-    <li className={styles.Request}>
+    <li onClick={() => onClick(url, method)}className={styles.Request}>
       <p>{method}</p>
       <p>{url}</p>
     </li>
@@ -13,7 +13,8 @@ function Request({ method, url }) {
 
 Request.propTypes = {
   method: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default Request;

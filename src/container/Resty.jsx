@@ -22,7 +22,6 @@ export default class Resty extends Component {
     if(this.state.history.includes({ url: this.state.url, method: this.state.method })) {
       this.setState({ response, url: '' });
     } else {
-      console.log(this.state.history);
       this.setState(state => ({
         response,
         history: [
@@ -31,9 +30,22 @@ export default class Resty extends Component {
         ],
         url: '',
       }));
-      console.log(this.state.history);
-
     }
+  }
+
+  handleClick = async(url, method) => {
+    console.log('it fires');
+    const json = await fetchUrl(url, method);
+    const response = await json.json();
+    console.log(json);
+    this.setState(state => ({
+      response,
+      history: [
+        ...state.history,
+        { url, method }
+      ],
+      url: '',
+    }));
   }
 
   handleChange = ({ target }) => {
@@ -61,7 +73,9 @@ export default class Resty extends Component {
         />
         <Display 
           response={response}/>
-        <History history={history}/>
+        <History 
+          history={history}
+          onClick={this.handleClick}/>
       </div>
     );
   }

@@ -20,7 +20,8 @@ describe('Old request component', () => {
         method: 'GET'
       },
     ];
-    const { asFragment } = render(<History history={history}/>);
+    // eslint-disable-next-line max-len
+    const { asFragment } = render(<History history={history} onClick={() => {}} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
