@@ -22,8 +22,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsonx": "^1.4.3",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-json-explorer": "^1.11.4-rjv",
+    "react-json-view": "^1.19.1",
+    "react-json-viewer": "^2.1.0",
+    "react-render-json": "^1.0.5",
+    "renderjson": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
